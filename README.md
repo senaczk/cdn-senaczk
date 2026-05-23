@@ -52,23 +52,6 @@ cd cdn-senaczk
 node source.js
 ```
 
-expected output:
-
-```txt
-loading source...
-checking files...
-starting backend...
-connecting database...
-initializing modules...
-
-LOL 😂
-
-there is no source here bro
-only README + aura
-
-github.com/senaczk
-```
-
 ## api
 
 ```http
