@@ -1,83 +1,86 @@
-# senaczk
-
 <div align="center">
+
+# senaczk cdn
 
 ```txt
 fast upload, instant link
 ```
 
-Personal cloud file uploader built for direct file hosting.
+personal cloud uploader for direct file hosting
+
+[![CDN](https://img.shields.io/badge/CDN-cdn.senaku.biz.id-1E3A8A?style=for-the-badge)](https://cdn.senaku.biz.id)
+[![Node.js](https://img.shields.io/badge/Node.js-Express-111827?style=for-the-badge&logo=node.js)]()
+[![Status](https://img.shields.io/badge/status-online-3B82F6?style=for-the-badge)]()
 
 </div>
 
 ---
 
-## Features
+## overview
 
-- Upload images
-- Upload videos
-- Upload audio
-- Upload documents
-- Direct file URL generation
-- Drag & Drop uploader
-- Upload history
-- API support
-- Mobile optimized
-- Dark dashboard UI
-- Fast upload system
-- Direct CDN access
-
----
-
-## Preview
+`senaczk cdn` is a personal file uploader built for fast upload, direct URL generation, and simple API usage.
 
 ```txt
-https://cdn.senaku.biz.id
+https://cdn.senaku.biz.id/u/file.ext
 ```
 
 ---
 
-## Endpoint
+## features
 
-```js
+| feature | status |
+|---|---|
+| image upload | active |
+| video upload | active |
+| audio upload | active |
+| file upload | active |
+| direct url | active |
+| drag and drop | active |
+| api endpoint | active |
+| upload history | local session |
+
+---
+
+## api
+
+```http
 POST /upload
 ```
 
-Upload Example:
+field:
+
+```txt
+file
+```
+
+example:
 
 ```js
 const fs = require('fs')
 const FormData = require('form-data')
 const fetch = require('node-fetch')
 
-async function upload(filePath){
+async function upload(filePath) {
+  const form = new FormData()
 
-const form = new FormData()
+  form.append(
+    'file',
+    fs.createReadStream(filePath)
+  )
 
-form.append(
-'file',
-fs.createReadStream(filePath)
-)
+  const res = await fetch('https://cdn.senaku.biz.id/upload', {
+    method: 'POST',
+    body: form
+  })
 
-const res = await fetch(
-'https://cdn.senaku.biz.id/upload',
-{
-method:'POST',
-body:form
-}
-)
-
-const data = await res.json()
-
-return data.url
-
+  const data = await res.json()
+  return data.url
 }
 
-upload('./image.jpg')
-.then(console.log)
+upload('./image.jpg').then(console.log)
 ```
 
-Response:
+response:
 
 ```json
 {
@@ -88,55 +91,31 @@ Response:
 
 ---
 
-## Stack
+## stack
 
 ```txt
-NodeJS
-ExpressJS
+Node.js
+Express
 Multer
-PM2
 Nginx
+PM2
 Ubuntu
 ```
 
 ---
 
-## File URL Example
+## links
 
-```txt
-https://cdn.senaku.biz.id/u/x7kd3a.jpg
-https://cdn.senaku.biz.id/u/q9dm1v.mp4
-https://cdn.senaku.biz.id/u/f82ka7.mp3
-```
-
----
-
-## Links
-
-Telegram
-
-```txt
-senaczk.t.me
-```
-
-GitHub
-
-```txt
-https://github.com/senaczk
-```
-
-CDN
-
-```txt
-https://cdn.senaku.biz.id
-```
+| platform | url |
+|---|---|
+| cdn | https://cdn.senaku.biz.id |
+| github | https://github.com/senaczk |
+| telegram | senaczk.t.me |
 
 ---
 
 <div align="center">
 
-senaczk
-
-built by Arsena Luciendra
+built by **Arsena Luciendra**
 
 </div>
