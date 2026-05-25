@@ -84,10 +84,12 @@ const senaczk = {
 
 ## GitHub Stats
 
-<p align="center">  
-<img src="https://github-readme-stats.vercel.app/api?username=senaczk&show_icons=true&theme=tokyonight" alt="senaczk GitHub Stats"/>  
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=senaczk&layout=compact&theme=tokyonight" alt="Top Languages"/>  
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=senaczk&theme=tokyonight" alt="GitHub Streak"/>  
+<p align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=senaczk&show_icons=true&theme=tokyonight&hide_border=true"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=senaczk&layout=compact&theme=tokyonight&hide_border=true"/>
+
 </p>
 
 <br/>
