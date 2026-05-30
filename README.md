@@ -4,7 +4,7 @@
 
 <p align="center">  
   <a href="https://github.com/senaczk">  
-    <img src="https://cloud.sena.biz.id/u/3Lp78gKB.jpg" width="150px" alt="Arsena Luciendra"/>  
+    <img src="https://senacloud.my.id/u/6c28716d50e6.jpg" width="150px" alt="Arsena Luciendra"/>  
   </a>  
 </p>
 
